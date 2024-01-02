@@ -17,4 +17,7 @@ public interface NotesDao {
     LiveData<List<NotesEntity>> getAllNotes();
 
 
+    @Query("SELECT * FROM notes_table")
+    List<NotesEntity> getAllNotesSync();
+
 }
